@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>webpage</title>
+</head>
+<body>
+    <div class="main-container" id="main">
+        <header>
+                <span class="bar-menu" id="bar-me">
+                    <span class="menu">Homepage</span>
+                    <span class="menu">Contact</span>
+                    <span class="menu">Info</span>
+                    <span class="menu">Detail</span>
+                    <span class="menu">HTML</span>
+                    <span class="menu">CSS</span>
+                    <span class="menu">JAVASCRIPT</span>
+                    <span class="menu">PHP</span>
+                    <span class="menu" onclick="newboxlogin()" id="login">Login</span>
+                </span>
+                
+        </header>
+        
+
+        <article></article>
+
+
+
+        <footer></footer>
+
+        
+    </div>
+    <!-- -------------------------------------------------------------- -->
+    <div class="box-none-show" id="box-none">
+        <p>LOGIN</p>
+        <label for="Username"><strong>Username :</strong>
+            <input type="text" name="username" id="username" placeholder="Enter Username">
+        </label>
+        <label for="Password"><strong>Password :</strong> 
+            <input type="password" name="password" id="password" placeholder="Enter Password">
+        </label>
+        <button class="loginbutton">Login</button>
+        <button onclick="noneshow()" class="x">x</button>
+    </div>
+
+
+
+    <!-- ------------------------------------------------------------- -->
+    <script>
+        let opa;
+        function newboxlogin(){
+            let box = document.getElementById("box-none");
+                box.style.display = "block";
+                opa = document.getElementById("main");
+                opa.style.opacity = "0.4";
+        }
+        function noneshow(){
+            let none = document.getElementById("box-none");
+                none.style.display = "none";
+                opa = document.getElementById("main");
+                opa.style.opacity = "1";
+        }
+    </script>
+</body>
+</html>
